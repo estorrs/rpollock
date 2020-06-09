@@ -5,10 +5,3 @@ predict_cell_types = function(counts_matrix, module_filepath) {
             module_filepath)
     predictions
 }
-
-fit_model = function(counts_matrix, labels, output_filepath) {
-    pollock = reticulate::import('pollock')
-    df = as.data.frame(counts_matrix)
-    pollock$wrappers$rwrappers$fit_from_dataframe(df, labels,
-            output_filepath)
-}
